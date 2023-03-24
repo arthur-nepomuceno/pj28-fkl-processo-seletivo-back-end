@@ -1,6 +1,5 @@
-import { query } from "express";
 import database from "../database.js";
-import { NovoCadastro } from "../types/cadastroTypes.js";
+import { Cadastro, NovoCadastro } from "../types/cadastroTypes.js";
 
 async function inserirElemento(elemento: NovoCadastro) {
     const {
@@ -58,8 +57,50 @@ async function deletarElemento(id: number) {
     return await database.query(`DELETE FROM cadastros WHERE id=$1`, [id]);
 }
 
-async function editarElemento(id: number) {
-    return;
+async function editarElemento(elemento: Cadastro) {
+    const {
+        id,
+        doc,
+        contato,
+        nomeFantasia,
+        telefoneContato,
+        razaoSocial,
+        emailContato,
+        endereco,
+        bairro,
+        cidade,
+        uf,
+        cep
+    } = elemento;
+
+    return database.query(`
+        UPDATE cadastros
+        SET doc = $1,
+            contato = $2,
+            "nomeFantasia" = $3,
+            "telefoneContato" = $4,
+            "razaoSocial" = $5,
+            "emailContato" = $6,
+            endereco = $7,
+            bairro = $8,
+            cidade = $9,
+            uf = $10,
+            cep = $11
+        WHERE id = $12
+    `, [
+        doc,
+        contato,
+        nomeFantasia,
+        telefoneContato,
+        razaoSocial,
+        emailContato,
+        endereco,
+        bairro,
+        cidade,
+        uf,
+        cep,
+        id
+    ]);
 }
 
 export {

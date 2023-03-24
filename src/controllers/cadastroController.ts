@@ -21,11 +21,13 @@ async function deletarCadastro(req: Request, res:Response) {
 }
 
 async function editarCadastro(req: Request, res: Response) {
-    const {id} = req.params;
+    const body = req.body;
 
-    await cadastroServices.editarCadastro(+id);
+    await cadastroServices.editarCadastro(body);
 
-    return await cadastroServices.buscarCadastroPorId(+id);
+    const cadastroEditado = await cadastroServices.buscarCadastroPorId(body.id);
+
+    return res.status(202).send(cadastroEditado);
 }
 
 export {

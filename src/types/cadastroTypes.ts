@@ -1,5 +1,6 @@
 
-type NovoCadastro = {
+type Cadastro = {
+    id: number,
     doc: string,
     contato: string,
     nomeFantasia: string,
@@ -13,6 +14,9 @@ type NovoCadastro = {
     cep: string
 }
 
+type NovoCadastro = Omit<Cadastro, 'id'>
+
 export {
+    Cadastro,
     NovoCadastro
 }
