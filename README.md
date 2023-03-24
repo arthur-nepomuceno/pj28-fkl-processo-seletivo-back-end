@@ -21,6 +21,7 @@
 
 ## Introdução
    Linguagem: typeScript.
+   
    Banco de Dados: postgreSQL.
 
    Existe somente uma tabela:
@@ -71,7 +72,7 @@ Dentro da pasta do projeto, rode o seguinte comando para instalar as dependênci
 npm install
 ```
 
-Ainda na pasta do projeto, crie um arquivo .env e preencha-o com base nas variáveis do arquivo .env.example. Os valores dessas variáveis de ambiente devem ser determinados por você, de acordo com a sua configuração local. Quando estiver preenchido, seu arquivo deve se parecer com algo assim:
+Ainda na pasta do projeto, crie um arquivo _.env_ e preencha-o com base nas variáveis do arquivo _.env.example_. Os valores dessas variáveis de ambiente devem ser determinados por você, de acordo com a sua configuração local. Quando estiver preenchido, seu arquivo deve se parecer com algo assim:
 
 ```
 PORT=5000
