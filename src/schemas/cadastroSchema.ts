@@ -6,7 +6,7 @@ const novoCadastro = joi.object({
     nomeFantasia: joi.string().required(),
     telefoneContato: joi.number().required(),
     razaoSocial: joi.string().required(),
-    emailContato: joi.string().uri().required(),
+    emailContato: joi.string().email().required(),
     endereco: joi.string().required(),
     bairro: joi.string().required(),
     cidade: joi.string().required(),
