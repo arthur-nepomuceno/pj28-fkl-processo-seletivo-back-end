@@ -4,7 +4,7 @@ import * as cadastroServices from "../services/cadastroServices.js";
 async function inserirCadastro(req: Request, res:Response) {
     const body = req.body;
     await cadastroServices.inserirCadastro(body);
-    return res.status(201).send('inserir cadastro ok')
+    return res.status(201).send('Cadastro adicionado com sucesso.')
 }
 
 async function buscarCadastros(req: Request, res:Response){
