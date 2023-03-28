@@ -5,16 +5,16 @@ const agent = supertest(app);
 
 const body = {
     doc: "00000000000",
-    contato: "Fulano de Tal",
-    nomeFantasia: "Fulano Mercearia",
+    contato: "Beltrano Souza",
+    nomeFantasia: "Bel's Mercearia",
     telefoneContato: "+552198765432",
-    razaoSocial: "Fulano MERC LTDA",
-    emailContato: "fulano@email.com",
-    endereco: "estrada da rua da vida",
-    bairro: "parque real",
-    cidade: "são joão do rio preto",
-    uf: "PB",
-    cep: "0000000"
+    razaoSocial: "Beltrano MERC LTDA",
+    emailContato: "beltrano@email.com",
+    endereco: "Estrada da Rua da Cida",
+    bairro: "Parque Jacareí",
+    cidade: "São João do Rio Preto",
+    uf: "PE",
+    cep: "25766000"
   }
 
 describe(`
